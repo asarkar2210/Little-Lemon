@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Book a table!</title>
+  <meta name="description" content="Book a Table at Little Lemon">
+  <meta name="author" content="Little Lemon">
+
+  <!-- Open Graph Protocol -->
+  <!--
+  <meta property="og:title" content="A brief description">
+  <meta property="og:type"  content="website">
+  <meta property="og:url"   content="https://www.mysite">
+  <meta property="og:description" content="A brief description">
+  <meta property="og:image" content="image.png">
+  -->
+
+  <!--
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  -->
+
+  <!-- Include your CSS files here -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- Add your website name or logo here -->
+    <p>Little Lemon | Book A Table</p>
+    <img src = "logo.png">
+  </header>
+  <nav>
+    <!-- Add your website navigation here -->
+    <ul>
+        <li><a href = index.html>Home</a></li>
+        <li><a href = location.html>Location</a></li>
+        <li><a href = blog.html>Blog</a></li>
+        <li><a href = booking.html>Book A Table</a></li>
+      </ul>
+  </nav>
+  <main>
+    <!-- Add your main content here -->
+    <form method = "POST">
+        <div>
+            <label for="booking_date">Booking Date</label>
+            <input type="date" id="booking_date" name="booking_date">
+        </div>
+
+        <div>
+            <label for="booking_people">Nunmber of People</label>
+            <input type="range" id="booking_people" name="booking_people" min="1" max="10" value="4" oninput="this.nextElementSibling.value = this.value">
+            <output>4</output>
+        </div>
+
+        <div>
+            <label for="booking_location">Location</label>
+            <input id="booking_location" name="booking_location" list="locations">
+            <datalist id="locations">
+                <option value="Downtown"></option>
+                <option value="Uptown"></option>
+            </datalist>
+        </div>
+     
+    </form>
+
+  </main>
+  <footer>
+    <!-- Add copyright notices and other footer content here -->
+
+  </footer>
+
+  <!-- Include your JavaScript files here -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
